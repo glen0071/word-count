@@ -1,7 +1,7 @@
 class Phrase
 
   def initialize (words)
-    @words = words
+    @words = clean(words)
     @word_hash = {}
   end
 
@@ -11,6 +11,10 @@ class Phrase
     else
       find_word_count
     end
+  end
+
+  def clean(string_of_words)
+    string_of_words.gsub(/\W/, ' ')
   end
 
   def find_word_count
