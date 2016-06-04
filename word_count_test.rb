@@ -69,7 +69,6 @@ class PhraseTest < Minitest::Test
   end
 
   def test_with_apostrophes
-    skip
     phrase = Phrase.new("First: don't laugh. Then: don't cry.")
     counts = {
       'first' => 1, "don't" => 2, 'laugh' => 1,
@@ -79,7 +78,6 @@ class PhraseTest < Minitest::Test
   end
 
   def test_with_quotations
-    skip
     phrase = Phrase.new("Joe can't tell between 'large' and large.")
     counts = {
       'joe' => 1, "can't" => 1, 'tell' => 1,
@@ -97,7 +95,6 @@ class PhraseTest < Minitest::Test
   # If you're curious, read more about constants on RubyDoc:
   # http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html
   def test_bookkeeping
-    skip
     assert_equal 1, BookKeeping::VERSION
   end
 end
