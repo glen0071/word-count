@@ -26,7 +26,6 @@ class PhraseTest < Minitest::Test
   end
 
   def test_count_everything_just_once
-    skip
     phrase = Phrase.new('all the kings horses and all the kings men')
     phrase.word_count # count it an extra time
     counts = {
@@ -37,7 +36,6 @@ class PhraseTest < Minitest::Test
   end
 
   def test_ignore_punctuation
-    skip
     phrase = Phrase.new('car : carpet as java : javascript!!&@$%^&')
     counts = {
       'car' => 1, 'carpet' => 1, 'as' => 1,
