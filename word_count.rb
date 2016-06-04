@@ -14,7 +14,7 @@ class Phrase
   end
 
   def clean(string_of_words)
-    string_of_words.gsub(/\W/, ' ')
+    string_of_words.gsub(/\W/, ' ').downcase
   end
 
   def find_word_count
