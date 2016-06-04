@@ -2,14 +2,14 @@ class Phrase
 
   def initialize (words)
     @words = words
+    @word_hash = {}
   end
 
   def word_count
-    word_hash = Hash.new
     @words.split.each do |word|
-      word_hash = { word => 1}
+      @word_hash[word] = 1
     end
-    word_hash
+    @word_hash
   end
 
 end
