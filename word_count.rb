@@ -7,7 +7,11 @@ class Phrase
 
   def word_count
     @words.split.each do |word|
-      @word_hash[word] = 1
+      if @word_hash.has_key?(word) == false
+        @word_hash[word] = 1
+      else
+        @word_hash[word] += 1
+      end
     end
     @word_hash
   end
